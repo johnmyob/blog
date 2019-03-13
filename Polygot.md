@@ -125,6 +125,7 @@ end
 <details><summary>References</summary>
 
 - [How to loop with indexes in Python](https://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/)
+- [Loops and Iterators in Ruby](https://launchschool.com/books/ruby/read/loops_iterators)
 
 </details>
 
