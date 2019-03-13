@@ -105,6 +105,23 @@ public class Solution { // Comment
 ```
 </details>
 
+<details><summary>Ruby</summary>
+
+```ruby
+def two_sum(nums, target)
+    for i in 0..nums.length-1
+        for j in 0..nums.length-1
+            if i != j && nums[i] + nums[j] == target
+                return [i,j]
+            end
+        end
+    end
+    return []
+end
+```
+</details>
+
+
 <details><summary>References</summary>
 
 - [How to loop with indexes in Python](https://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/)
