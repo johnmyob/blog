@@ -1,3 +1,3 @@
 # Blogs
 
-- [JavaScript](./javascript.md)
+- [JavaScript](./JavaScript.md)
