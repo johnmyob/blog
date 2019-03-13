@@ -2,7 +2,7 @@
 
 <details><summary>Arrays slice, splice and the spread operator</summary>
 
-- Imutable slice and spread operator.
+- Immutable slice and spread operator.
 
     ```javascript
     > let a = [1, 2, 3, 4, 5]
