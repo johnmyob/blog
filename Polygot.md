@@ -121,6 +121,21 @@ end
 ```
 </details>
 
+<details><summary>Golang</summary>
+
+```go
+func twoSum(nums []int, target int) []int {
+    for i, vi := range nums {
+        for j, vj := range nums {
+            if (i != j && vi + vj == target) {
+                return []int{i,j}
+            }
+        }
+    }
+    return []int{}
+}
+```
+</details>
 
 <details><summary>References</summary>
 
