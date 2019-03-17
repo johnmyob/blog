@@ -37,6 +37,6 @@ class Solution {
 - [Split a String in Java](https://www.baeldung.com/java-split-string)
 - [Java – How to convert Array to Stream](https://www.mkyong.com/java8/java-how-to-convert-array-to-stream/)
 - [How to Invert an Array in Java](https://www.baeldung.com/java-invert-array)
-- [Java String join() with examples](https://www.geeksforgeeks.org/java-string-join-examples/)[How to loop with indexes in Python](https://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/)
+- [Java String join() with examples](https://www.geeksforgeeks.org/java-string-join-examples/)
 
 </details>
