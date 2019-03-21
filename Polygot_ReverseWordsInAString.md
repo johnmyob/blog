@@ -49,5 +49,6 @@ object Solution {
 - [Java – How to convert Array to Stream](https://www.mkyong.com/java8/java-how-to-convert-array-to-stream/)
 - [How to Invert an Array in Java](https://www.baeldung.com/java-invert-array)
 - [Java String join() with examples](https://www.geeksforgeeks.org/java-string-join-examples/)
+- [Scala: How to extract parts of a string that match a regex](https://alvinalexander.com/scala/how-to-extract-parts-strings-match-regular-expression-regex-scala)
 
 </details>
