@@ -30,6 +30,17 @@ class Solution {
 ```
 </details>
 
+<details><summary>Scala</summary>
+
+```scala
+object Solution {
+    def reverseWords(s: String): String = {
+      s.trim().split("\\s+").reverse.mkString(" ")  
+    }
+}
+```
+</details>
+
 <details><summary>References</summary>
 
 - [Regular expressions in Java - Tutorial](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html)
