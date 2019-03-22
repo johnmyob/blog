@@ -11,7 +11,7 @@ const reverseWords = (s) =>
 ```
 </details>
 
-<details><summary>Java - Refactored</summary>
+<details><summary>Java - refactored</summary>
 
 ```java
 import java.util.Arrays;
@@ -52,7 +52,7 @@ class Solution {
 ```
 </details>
 
-<details><summary>Kotlin first Attempt</summary>
+<details><summary>Kotlin - first Attempt</summary>
 
 ```kotlin
 class Solution {
