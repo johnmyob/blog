@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-class Solution {
+class Solution { // Runtime: 8 ms, Memory: 40.1 MB
     public String reverseWords(String s) {
         String[] sArray = s.trim().split("\\s+"); // less code, but 8ms compared to 6ms for complete solution
 
@@ -38,9 +38,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-//T ime Submitted  Status  Runtime Memory  Language
-// a few seconds ago	Accepted	47 ms	39.3 MB	java
-class Solution {
+class Solution { // Runtime: 47 ms, Memory: 39.3 MB
     public String reverseWords(String s) {
         String[] arr = s.trim().split("\\s+");
 
@@ -92,7 +90,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-class Solution {
+class Solution { // Runtime: 6 ms, Memory: 40.2 MB
     public String reverseWords(String s) {
         String[] sArray = s.trim().replaceAll("\\s\\s+", " ").split(" ");
 
