@@ -11,7 +11,7 @@ const reverseWords = (s) =>
 ```
 </details>
 
-<details><summary>Java</summary>
+<details><summary>Java - Refactored</summary>
 
 ```java
 import java.util.Arrays;
@@ -20,7 +20,6 @@ import java.util.List;
 
 class Solution {
     public String reverseWords(String s) {
-        // String[] sArray = s.trim().replaceAll("\\s\\s+", " ").split(" ");
         String[] sArray = s.trim().split("\\s+"); // less code, but 8ms compared to 6ms for complete solution
 
         List<String> list = Arrays.asList(sArray);
@@ -43,7 +42,17 @@ object Solution {
 ```
 </details>
 
-<details><summary>Kotlin</summary>
+<details><summary>Kotlin - refactored</summary>
+
+```kotlin
+class Solution {
+    fun reverseWords(s: String) = s.trim().split("\\s+".toRegex())
+        .asReversed().joinToString(separator = " ");
+}
+```
+</details>
+
+<details><summary>Kotlin first Attempt</summary>
 
 ```kotlin
 class Solution {
@@ -51,6 +60,26 @@ class Solution {
         return s.trim()
             .split("\\s+".toRegex()).asReversed()
             .joinToString(separator = " ");
+    }
+}
+```
+</details>
+
+<details><summary>Java - first Attempt</summary>
+
+```java
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+class Solution {
+    public String reverseWords(String s) {
+        String[] sArray = s.trim().replaceAll("\\s\\s+", " ").split(" ");
+
+        List<String> list = Arrays.asList(sArray);
+        Collections.reverse(list);
+        
+        return String.join(" ", (String[])list.toArray());
     }
 }
 ```
