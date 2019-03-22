@@ -38,6 +38,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+//T ime Submitted  Status  Runtime Memory  Language
+// a few seconds ago	Accepted	47 ms	39.3 MB	java
 class Solution {
     public String reverseWords(String s) {
         String[] arr = s.trim().split("\\s+");
