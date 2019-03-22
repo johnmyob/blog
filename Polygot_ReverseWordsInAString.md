@@ -41,6 +41,19 @@ object Solution {
 ```
 </details>
 
+<details><summary>Kotlin</summary>
+
+```kotlin
+class Solution {
+    fun reverseWords(s: String): String {
+        return s.trim()
+            .split("\\s+".toRegex()).asReversed()
+            .joinToString(separator = " ");
+    }
+}
+```
+</details>
+
 <details><summary>References</summary>
 
 - [Regular expressions in Java - Tutorial](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html)
