@@ -6,7 +6,8 @@
 
 ```javascript
 const reverseWords = (s) =>
-    s.trim().replace(/\s\s+/g, ' ').split(" ").reverse().join(" ");
+    // s.trim().replace(/\s\s+/g, ' ').split(" ").reverse().join(" ");
+    s.trim().split(/\s+/).reverse().join(" "); // more memory 34.8MB compared to 34.2MB
 ```
 </details>
 
@@ -19,7 +20,8 @@ import java.util.List;
 
 class Solution {
     public String reverseWords(String s) {
-        String[] sArray = s.trim().replaceAll("\\s\\s+", " ").split(" ");
+        // String[] sArray = s.trim().replaceAll("\\s\\s+", " ").split(" ");
+        String[] sArray = s.trim().split("\\s+"); // less code, but 8ms compared to 6ms for complete solution
 
         List<String> list = Arrays.asList(sArray);
         Collections.reverse(list);
