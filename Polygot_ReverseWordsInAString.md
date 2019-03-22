@@ -11,7 +11,7 @@ const reverseWords = (s) =>
 ```
 </details>
 
-<details><summary>Java - refactored</summary>
+<details><summary>Java - collections</summary>
 
 ```java
 import java.util.Arrays;
@@ -26,6 +26,24 @@ class Solution {
         Collections.reverse(list);
         
         return String.join(" ", (String[])list.toArray());
+    }
+}
+```
+</details>
+
+<details><summary>Java - streams</summary>
+
+```java
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+class Solution {
+    public String reverseWords(String s) {
+        String[] arr = s.trim().split("\\s+");
+
+        return IntStream.rangeClosed(1, arr.length).mapToObj(i -> arr[arr.length - i])
+                .collect(Collectors.joining(" "));
     }
 }
 ```
