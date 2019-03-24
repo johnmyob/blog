@@ -1,6 +1,6 @@
 ## Scala HakerRank exercises
 
-<details>Staircase - right aligned</summary>
+<details><sammary>Staircase - right aligned</summary>
 
 - [Staircase - right aligned](https://www.hackerrank.com/challenges/staircase/problem?h_r=next-challenge&h_v=legacy)
 - Consider a staircase of size :
