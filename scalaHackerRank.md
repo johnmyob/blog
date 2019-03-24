@@ -1,4 +1,4 @@
-# Java Script
+## Scala HakerRank exercises
 
 <details>Staircase - right aligned</summary>
 
