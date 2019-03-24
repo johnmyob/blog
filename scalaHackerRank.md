@@ -1,6 +1,6 @@
 # Java Script
 
-<details><summary>[Staircase - right aligned](https://www.hackerrank.com/challenges/staircase/problem?h_r=next-challenge&h_v=legacy)</summary>
+<details><summary>(https://www.hackerrank.com/challenges/staircase/problem?h_r=next-challenge&h_v=legacy)[Staircase - right aligned]</summary>
 
 - Consider a staircase of size :
 
