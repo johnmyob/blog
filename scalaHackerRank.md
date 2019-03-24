@@ -42,7 +42,6 @@ object Solution {
         printf("%.6f\n%.6f\n%.6f\n", pos/dn, neg/dn, zero/dn)         
     }
 }
-
 ```
 
 </details>
