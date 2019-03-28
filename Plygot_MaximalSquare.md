@@ -283,6 +283,103 @@
 
 </details>
 
+<details><summary>Kotlin</summary>
+    
+```kotlin
+object MaximalSquare {
+
+    /**
+     * return number of 1s in array (a) starting at index (s)
+     */
+    fun horizontal1s(a: CharArray, s: Int): Int {
+        var count = 0
+        var i = s
+        while (i < a.size && a[i] != '0') {
+            count += 1
+            i++
+        }
+        return count
+    }
+
+    /**
+     * count horizontal 1s
+     * -> return max h1s for a square starting at ir, ic
+     *
+     * - initial: count first row of 1s -> h1s
+     * - termination: if h1s and row count equal or
+     * - array out of bounds or
+     * - starting char of current row '0'
+     * - return Min(h1s, rows checked)
+     * - step: count next row of 1s
+     */
+    fun maxH1sForSquareStartingAt(m: Array<CharArray>, ir: Int, ic: Int): Int {
+        var h1s = horizontal1s(m[ir], ic)
+        var r = ir + 1
+
+        while (r < m.size && r - ir < h1s && m[r][ic] != '0') {
+            h1s = Math.min(h1s, horizontal1s(m[r], ic))
+            r++
+        }
+        return if (h1s > r - ir) r - ir else h1s
+    }
+
+
+    /**
+     * return area of max square of 1s in matrix
+     *
+     * - initial: h1s = 0
+     * - termination: if
+     * - array is out of bounds or
+     * - h1s < numCols - c  or
+     * - h1s < numRows -r
+     * - step:
+     * - h1s = max(h1s, maxH1sForSquareStartingAt(m, r, c)
+     * - increment column index (c) otherwise increment row index (r) and set c = 0
+     *
+     * @param {char[][]} matrix
+     * @return {number}
+     */
+    fun maximalSquare(m: Array<CharArray>): Int {
+        if (m.size == 0) {
+            return 0
+        }
+        var h1s = 0
+        val numCols = m[0].size
+        val numRows = m.size
+        var r = 0
+        while (r < numRows && h1s < numRows - r) {
+            var c = 0
+            while (c < numCols && h1s < numCols - c) {
+                h1s = Math.max(h1s, maxH1sForSquareStartingAt(m, r, c))
+                c++
+            }
+            r++
+        }
+        return h1s * h1s
+    }
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        var m = arrayOf(
+            charArrayOf('1', '1', '1', '1', '1', '1', '1', '1'), 
+            charArrayOf('1', '1', '1', '1', '1', '1', '1', '0'), 
+            charArrayOf('1', '1', '1', '1', '1', '1', '1', '0'), 
+            charArrayOf('1', '1', '1', '1', '1', '0', '0', '0'), 
+            charArrayOf('0', '1', '1', '1', '1', '0', '0', '0'))
+        println("maximalSquare=" + MaximalSquare.maximalSquare(m))
+        m = arrayOf(
+            charArrayOf('1', '1', '1', '1', '0', '0', '0', '0'), 
+            charArrayOf('1', '1', '1', '1', '1', '1', '1', '0'), 
+            charArrayOf('1', '1', '1', '1', '1', '1', '1', '0'), 
+            charArrayOf('1', '1', '1', '1', '1', '0', '0', '0'), 
+            charArrayOf('0', '1', '1', '1', '1', '0', '0', '0'))
+        println("maximalSquare=" + MaximalSquare.maximalSquare(m))
+    }
+
+}
+```
+</details>
+
 <details><summary>JavaScript</summary>
     
 ```javascript
