@@ -5,7 +5,7 @@
 
 <details><summary>Java</summary>
     
-    <details><summary>Solution</summary>
+- <details><summary>Solution</summary>
 
     ```java
     public class MaximalSquare {
@@ -73,7 +73,7 @@
 
     </details>
 
-    <details><summary>Tests</summary>
+- <details><summary>Tests</summary>
 
     ```java
     import org.junit.Test;
