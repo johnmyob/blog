@@ -166,44 +166,44 @@
     ```scala
     class MaximalSquare {
 
-    def horizontal1s(a: Array[Char], s: Int): Int = {
-      if (s >= a.length || a(s) == '0') return 0
-      horizontal1s(a, s+1) + 1
-    }
-
-    def maxH1sForSquareStartingAt (m: Array[Array[Char]], ir: Int, ic: Int):Int = {
-      var h1s = horizontal1s(m(ir), ic)
-      val r = ir + 1
-
-      def maxH1sForSquareStartingAt (r: Int, c: Int):Int = {
-        var rp = r - ir // rows processed
-        if (r >= m.length || rp >= h1s || m(r)(ic) == '0') {
-          if (h1s > rp) return rp else return h1s
+        def horizontal1s(a: Array[Char], s: Int): Int = {
+          if (s >= a.length || a(s) == '0') return 0
+          horizontal1s(a, s+1) + 1
         }
-        h1s = Math.min(h1s, horizontal1s(m(r), ic))
-        maxH1sForSquareStartingAt(r+1, ic)
-      }
 
-      maxH1sForSquareStartingAt(ir+1, ic)
+        def maxH1sForSquareStartingAt (m: Array[Array[Char]], ir: Int, ic: Int):Int = {
+          var h1s = horizontal1s(m(ir), ic)
+          val r = ir + 1
+
+          def maxH1sForSquareStartingAt (r: Int, c: Int):Int = {
+            var rp = r - ir // rows processed
+            if (r >= m.length || rp >= h1s || m(r)(ic) == '0') {
+              if (h1s > rp) return rp else return h1s
+            }
+            h1s = Math.min(h1s, horizontal1s(m(r), ic))
+            maxH1sForSquareStartingAt(r+1, ic)
+          }
+
+          maxH1sForSquareStartingAt(ir+1, ic)
+        }
+
+        def maximalSquare(m: Array[Array[Char]]): Int = {
+          if (m.length == 0) return 0
+          var h1s = 0
+          val numCols = m(0).length
+          val numRows = m.length
+
+          def maximalSquare(r: Int, c: Int): Int = {
+            if (r >= numRows || h1s >= numRows - r) return h1s*h1s
+            if (c >= numCols || h1s >= numCols - c) return maximalSquare(r+1, 0)
+            h1s = Math.max(h1s, maxH1sForSquareStartingAt(m, r, c))
+            maximalSquare(r, c+1)
+          }
+
+          maximalSquare(0, 0)
+        }
+
     }
-
-    def maximalSquare(m: Array[Array[Char]]): Int = {
-      if (m.length == 0) return 0
-      var h1s = 0
-      val numCols = m(0).length
-      val numRows = m.length
-
-      def maximalSquare(r: Int, c: Int): Int = {
-        if (r >= numRows || h1s >= numRows - r) return h1s*h1s
-        if (c >= numCols || h1s >= numCols - c) return maximalSquare(r+1, 0)
-        h1s = Math.max(h1s, maxH1sForSquareStartingAt(m, r, c))
-        maximalSquare(r, c+1)
-      }
-
-      maximalSquare(0, 0)
-    }
-
-}
     ```
 
     </details>
