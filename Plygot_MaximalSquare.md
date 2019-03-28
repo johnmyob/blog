@@ -288,9 +288,6 @@
 ```kotlin
 object MaximalSquare {
 
-    /**
-     * return number of 1s in array (a) starting at index (s)
-     */
     fun horizontal1s(a: CharArray, s: Int): Int {
         var count = 0
         var i = s
@@ -301,17 +298,6 @@ object MaximalSquare {
         return count
     }
 
-    /**
-     * count horizontal 1s
-     * -> return max h1s for a square starting at ir, ic
-     *
-     * - initial: count first row of 1s -> h1s
-     * - termination: if h1s and row count equal or
-     * - array out of bounds or
-     * - starting char of current row '0'
-     * - return Min(h1s, rows checked)
-     * - step: count next row of 1s
-     */
     fun maxH1sForSquareStartingAt(m: Array<CharArray>, ir: Int, ic: Int): Int {
         var h1s = horizontal1s(m[ir], ic)
         var r = ir + 1
@@ -323,22 +309,6 @@ object MaximalSquare {
         return if (h1s > r - ir) r - ir else h1s
     }
 
-
-    /**
-     * return area of max square of 1s in matrix
-     *
-     * - initial: h1s = 0
-     * - termination: if
-     * - array is out of bounds or
-     * - h1s < numCols - c  or
-     * - h1s < numRows -r
-     * - step:
-     * - h1s = max(h1s, maxH1sForSquareStartingAt(m, r, c)
-     * - increment column index (c) otherwise increment row index (r) and set c = 0
-     *
-     * @param {char[][]} matrix
-     * @return {number}
-     */
     fun maximalSquare(m: Array<CharArray>): Int {
         if (m.size == 0) {
             return 0
