@@ -4,7 +4,7 @@
 - Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
 
 <details><summary>Java</summary>
-
+<details><summary>Solution</summary>
 ```java
 public class MaximalSquare {
 
@@ -68,6 +68,91 @@ public class MaximalSquare {
     }
 }
 ```
+</details>
+
+<details><summary>Tests</summary>
+```java
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class MaximalSquareTest {
+
+    @org.junit.Test
+    public void horizontal1s() {
+        char[] a = {'1'};
+        assertEquals(MaximalSquare.horizontal1s(a, 0), 1);
+        a = new char[]{'1','1'};
+        assertEquals(MaximalSquare.horizontal1s(a, 0), 2);
+        a = new char[]{'0','1','1'};
+        assertEquals(MaximalSquare.horizontal1s(a, 0), 0);
+        a = new char[]{'0','1','1'};
+        assertEquals(MaximalSquare.horizontal1s(a, 1), 2);
+        a = new char[]{'0','1','1','1','0'};
+        assertEquals(MaximalSquare.horizontal1s(a, 1), 3);
+    }
+
+    @Test
+    public void maxH1sForSquareStartingAt() {
+        char[][] m = new char[][]{
+                {'1','1','1','1','1','1','1','1'},
+                {'1','1','1','1','1','1','1','0'},
+                {'1','1','1','1','1','1','1','0'},
+                {'1','1','1','1','1','0','0','0'},
+                {'0','1','1','1','1','0','0','0'}};
+        assertEquals(4, MaximalSquare.maxH1sForSquareStartingAt(m,0,0));
+        assertEquals(4, MaximalSquare.maxH1sForSquareStartingAt(m,0,1));
+    }
+
+    @org.junit.Test
+    public void maximalSquare() {
+        char[][] m;
+        m = new char[][]{
+                {'1'}
+        };
+        assertEquals(MaximalSquare.maximalSquare(m), 1);
+        m = new char[][]{
+                {'0'}
+        };
+        assertEquals(MaximalSquare.maximalSquare(m), 0);
+        m = new char[][]{
+                {'0', '1'}
+        };
+        assertEquals(MaximalSquare.maximalSquare(m), 1);
+        m = new char[][]{
+                {'0', '1', '1'},
+                {'0', '1', '1'}
+        };
+        assertEquals(MaximalSquare.maximalSquare(m), 4);
+        m = new char[][]{
+                {'1','0','1','0','0'},
+                {'1','0','1','1','1'},
+                {'1','1','1','1','1'},
+                {'1','0','0','1','0'}};
+        assertEquals(MaximalSquare.maximalSquare(m), 4);
+        m = new char[][]{
+                {'1','1','1','1','1','1','1','1'},
+                {'1','1','1','1','1','1','1','0'},
+                {'1','1','1','1','1','1','1','0'},
+                {'1','1','1','1','1','0','0','0'},
+                {'0','1','1','1','1','0','0','0'}};
+        assertEquals(16, MaximalSquare.maximalSquare(m));
+        m = new char[][]{
+        };
+        assertEquals(MaximalSquare.maximalSquare(m), 0);
+        m = new char[][]{
+                {'0','0','0','0','0'},
+                {'1','0','0','0','0'},
+                {'0','0','0','0','0'},
+                {'0','0','0','0','0'}
+        };
+        assertEquals(1, MaximalSquare.maximalSquare(m));
+    }
+
+}
+```
+</details>
+
 </details>
 
 
