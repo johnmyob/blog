@@ -1,6 +1,6 @@
-# Java Script
+# React
 
-<details><summary>Sample</summary>
+<details><summary>Statefull Component</summary>
 
 ```javascript
 // BookList.js
@@ -41,6 +41,10 @@ class BookList extends React.Component {
 
 export default BookList
 ```
+</details>
+
+<details><summary>Stateless Component</summary>
+
 ```javascript
 # BookItem.js
 import React from 'react'
@@ -53,6 +57,9 @@ const BookItem = ({book}) =>
 
 export default BookItem
 ```
+</details>
+<details><summary>Arrow function</summary>
+
 ```javascript
 # Utils.js
 const getIsbns = (book) => 
