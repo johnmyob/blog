@@ -33,7 +33,7 @@ class BookList extends React.Component {
         return books && books.length > 0 ? 
             <div style={{padding: '5px'}}>
                 Books:
-                {books.map( (book, i) => <BookItem key=`${book.isbn}: ${i}` book={book} />)}
+                {books.map( (book, i) => <BookItem key={`${book.isbn}: ${i}`} book={book} />)}
             </div> : 
             <div style={{padding: '5px'}}>No books...</div>
     }
