@@ -33,7 +33,7 @@ class BookList extends React.Component {
         return books && books.length > 0 ? 
             <div style={{padding: '5px'}}>
                 Books:
-                {books.map( book => <BookItem book={book} />)}
+                {books.map( (book, i) => <BookItem key=`${book.isbn}: ${i}` book={book} />)}
             </div> : 
             <div style={{padding: '5px'}}>No books...</div>
     }
@@ -50,7 +50,7 @@ export default BookList
 import React from 'react'
 
 const BookItem = ({book}) => 
-    <div key={book.isbn}>
+    <div>
         title: {book.title},&nbsp;
         <a href={book.previewLink}>{book.previewLink}</a>
     </div>
