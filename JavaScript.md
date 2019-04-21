@@ -118,6 +118,8 @@ console.log(`_.isEqual(one, two): ${_.isEqual(three, two)}`);
 </details>
 
 <details><summary>Default Values</summary>
+    
+- [An overview of what’s new in ES6](http://exploringjs.com/es6/ch_overviews.html)
 
 ```javascript
 // default value
