@@ -48,5 +48,60 @@ var b;
 console.log(a = b = 5);
 // expected output: 5;
   ```
+  
+  - Deep Object comparison
+    - [online testing of any npm module](https://npm.runkit.com/npm)
+  
+  ```javascript
+ var _ = require("lodash")
+const one = {
+  fruit: '🥝',
+  nutrients: {
+    energy: '255kJ',
+    minerals: {
+      name: 'calcium'
+    }
+  },
+  daysOfWeek: [1,2,3],
+};
+
+const two = {
+  fruit: '🥝',
+  nutrients: {
+    energy: '255kJ',
+    minerals: {
+      name: 'calcium'
+    }
+  },
+  daysOfWeek: [1,2,3],
+};
+
+const three = {
+  daysOfWeek: [1,2,3],
+  fruit: '🥝',
+  nutrients: {
+    energy: '255kJ',
+    minerals: {
+      name: 'calcium'
+    }
+  },
+};
+
+// Using JavaScript
+JSON.stringify(one) === JSON.stringify(two); // true
+console.log(`JSON.stringify(one) === JSON.stringify(two): ${JSON.stringify(one) === JSON.stringify(two)}`);
+
+// Using Lodash
+_.isEqual(one, two); // true
+console.log(`_.isEqual(one, two): ${_.isEqual(one, two)}`);
+
+// Using JavaScript
+JSON.stringify(three) === JSON.stringify(two); // true
+console.log(`JSON.stringify(three) === JSON.stringify(two): ${JSON.stringify(three) === JSON.stringify(two)}`);
+
+// Using Lodash
+_.isEqual(three, two); // true
+console.log(`_.isEqual(one, two): ${_.isEqual(three, two)}`);
+  ```
 
 </details>
