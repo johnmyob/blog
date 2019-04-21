@@ -49,6 +49,16 @@ console.log(a = b = 5);
 // expected output: 5;
   ```
   
+  ```javascript
+    // using coersion and no coersion together
+    const a = [undefined, null, false, 0, ""];
+    a.forEach((v, i) => {
+      if (v || v === 0) {
+        console.log(`${v} at index ${i} is a value`);
+      }
+    });
+  ```
+  
   - Deep Object comparison
     - [online testing of any npm module](https://npm.runkit.com/npm)
   
