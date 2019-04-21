@@ -116,3 +116,25 @@ console.log(`_.isEqual(one, two): ${_.isEqual(three, two)}`);
   ```
 
 </details>
+
+<details><summary>Default Values</summary>
+
+```javascript
+// default value
+const greetES6 = (name='<Enter name>') => 'Hello ' + name;
+function greet(name) {
+  name = name || '<Enter name>';
+  return 'Hello ' + name;
+}
+console.log(`greetES6(): ${greetES6()}`)
+console.log('greet(): ' + greet())
+console.log(`greetES6(null): ${greetES6(null)}`)
+console.log('greet(null): ' + greet(null))
+
+// Output:
+//  "greetES6(): Hello <Enter name>"
+//  "greet(): Hello <Enter name>"
+//  "greetES6(null): Hello null"
+//  "greet(null): Hello <Enter name>"
+```
+</details>
