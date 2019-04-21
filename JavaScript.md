@@ -57,6 +57,7 @@ console.log(a = b = 5);
         console.log(`${v} at index ${i} is a value`);
       }
     });
+    // output: "0 at index 3 is a value"
   ```
   
   - Deep Object comparison
