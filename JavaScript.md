@@ -27,5 +27,7 @@
     > a
     (6) [1, 2, 3, 4, 4.5, 5]
     ```
+    
+- [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
 </details>
